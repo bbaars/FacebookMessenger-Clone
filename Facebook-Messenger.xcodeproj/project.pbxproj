@@ -13,8 +13,9 @@
 		CA03438E2010043500037D59 /* Facebook_Messenger.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CA03438C2010043500037D59 /* Facebook_Messenger.xcdatamodeld */; };
 		CA0343932010043500037D59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA0343912010043500037D59 /* LaunchScreen.storyboard */; };
 		CA03439B2010080800037D59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA03439A2010080800037D59 /* Assets.xcassets */; };
-		CAA102162012805200C2AF2C /* Message+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA102122012805200C2AF2C /* Message+CoreDataClass.swift */; };
-		CAA102172012805200C2AF2C /* Message+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA102132012805200C2AF2C /* Message+CoreDataProperties.swift */; };
+		CA0D525F2015314F0010DA4D /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0D525E2015314F0010DA4D /* CustomTabBarController.swift */; };
+		CA0D5266201560560010DA4D /* Message+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0D5264201560560010DA4D /* Message+CoreDataClass.swift */; };
+		CA0D5267201560560010DA4D /* Message+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0D5265201560560010DA4D /* Message+CoreDataProperties.swift */; };
 		CAA102182012805200C2AF2C /* Friend+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA102142012805200C2AF2C /* Friend+CoreDataClass.swift */; };
 		CAA102192012805200C2AF2C /* Friend+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA102152012805200C2AF2C /* Friend+CoreDataProperties.swift */; };
 		CAA1021B20141B1100C2AF2C /* ChatLogController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA1021A20141B1100C2AF2C /* ChatLogController.swift */; };
@@ -30,10 +31,11 @@
 		CA0343922010043500037D59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CA0343942010043500037D59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA03439A2010080800037D59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../fbMessenger/fbMessenger/Assets.xcassets; sourceTree = "<group>"; };
-		CAA102122012805200C2AF2C /* Message+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Message+CoreDataClass.swift"; path = "CoreData/Message+CoreDataClass.swift"; sourceTree = "<group>"; };
-		CAA102132012805200C2AF2C /* Message+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Message+CoreDataProperties.swift"; path = "CoreData/Message+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		CAA102142012805200C2AF2C /* Friend+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Friend+CoreDataClass.swift"; path = "CoreData/Friend+CoreDataClass.swift"; sourceTree = "<group>"; };
-		CAA102152012805200C2AF2C /* Friend+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Friend+CoreDataProperties.swift"; path = "CoreData/Friend+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CA0D525E2015314F0010DA4D /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		CA0D5264201560560010DA4D /* Message+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Message+CoreDataClass.swift"; sourceTree = "<group>"; };
+		CA0D5265201560560010DA4D /* Message+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Message+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CAA102142012805200C2AF2C /* Friend+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Friend+CoreDataClass.swift"; sourceTree = "<group>"; };
+		CAA102152012805200C2AF2C /* Friend+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Friend+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		CAA1021A20141B1100C2AF2C /* ChatLogController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLogController.swift; sourceTree = "<group>"; };
 		CAF8D66F2012715D008AD18F /* FriendsControllerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsControllerHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,13 +70,11 @@
 		CA0343842010043500037D59 /* Facebook-Messenger */ = {
 			isa = PBXGroup;
 			children = (
-				CAA102122012805200C2AF2C /* Message+CoreDataClass.swift */,
-				CAA102132012805200C2AF2C /* Message+CoreDataProperties.swift */,
-				CAA102142012805200C2AF2C /* Friend+CoreDataClass.swift */,
-				CAA102152012805200C2AF2C /* Friend+CoreDataProperties.swift */,
+				CA0D525D201530480010DA4D /* Core Data */,
 				CA0343872010043500037D59 /* FriendsController.swift */,
 				CAF8D66F2012715D008AD18F /* FriendsControllerHelper.swift */,
 				CAA1021A20141B1100C2AF2C /* ChatLogController.swift */,
+				CA0D525E2015314F0010DA4D /* CustomTabBarController.swift */,
 				CA0343892010043500037D59 /* Main.storyboard */,
 				CA0343852010043500037D59 /* AppDelegate.swift */,
 				CA03439A2010080800037D59 /* Assets.xcassets */,
@@ -83,6 +83,17 @@
 				CA03438C2010043500037D59 /* Facebook_Messenger.xcdatamodeld */,
 			);
 			path = "Facebook-Messenger";
+			sourceTree = "<group>";
+		};
+		CA0D525D201530480010DA4D /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				CA0D5264201560560010DA4D /* Message+CoreDataClass.swift */,
+				CA0D5265201560560010DA4D /* Message+CoreDataProperties.swift */,
+				CAA102142012805200C2AF2C /* Friend+CoreDataClass.swift */,
+				CAA102152012805200C2AF2C /* Friend+CoreDataProperties.swift */,
+			);
+			path = "Core Data";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,15 +168,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA0D5266201560560010DA4D /* Message+CoreDataClass.swift in Sources */,
 				CAA1021B20141B1100C2AF2C /* ChatLogController.swift in Sources */,
 				CA0343882010043500037D59 /* FriendsController.swift in Sources */,
+				CA0D525F2015314F0010DA4D /* CustomTabBarController.swift in Sources */,
 				CA03438E2010043500037D59 /* Facebook_Messenger.xcdatamodeld in Sources */,
-				CAA102172012805200C2AF2C /* Message+CoreDataProperties.swift in Sources */,
 				CA0343862010043500037D59 /* AppDelegate.swift in Sources */,
 				CAF8D6702012715D008AD18F /* FriendsControllerHelper.swift in Sources */,
 				CAA102192012805200C2AF2C /* Friend+CoreDataProperties.swift in Sources */,
+				CA0D5267201560560010DA4D /* Message+CoreDataProperties.swift in Sources */,
 				CAA102182012805200C2AF2C /* Friend+CoreDataClass.swift in Sources */,
-				CAA102162012805200C2AF2C /* Message+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

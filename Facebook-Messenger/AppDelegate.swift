@@ -21,12 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // create a custom window from our Friends Controller (instead of using main.storyboard)
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
-        
-        UINavigationBar.appearance().tintColor = .black
-        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.font: UIFont(name: "Avenir Next", size: 19)!]
-        
-        let friendsController = FriendsController(collectionViewLayout: UICollectionViewFlowLayout())
-        window?.rootViewController = UINavigationController(rootViewController: friendsController)
+        window?.rootViewController = CustomTabBarController()
         
         return true
     }
@@ -56,7 +51,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     // MARK: - Core Data stack
-
     lazy var persistentContainer: NSPersistentContainer = {
         /*
          The persistent container for the application. This implementation
@@ -85,7 +79,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }()
 
     // MARK: - Core Data Saving support
-
     func saveContext () {
         let context = persistentContainer.viewContext
         if context.hasChanges {
@@ -99,6 +92,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
-
 }
 

@@ -29,6 +29,12 @@ class FriendsController: UICollectionViewController, UICollectionViewDelegateFlo
         setupData()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        tabBarController?.tabBar.isHidden = false
+    }
+    
     // MARK: - Collection View Data Source
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if let count = messages?.count {
@@ -81,6 +87,16 @@ class MessageCell: BaseCell {
             if let date = message?.date {
                 let dateformatter = DateFormatter()
                 dateformatter.dateFormat = "h:mm a"
+                
+                let elapsedTimeInSeconds = NSDate().timeIntervalSince(date as Date)
+                let secondsInDay: TimeInterval = 60 * 60 * 24
+                
+                if elapsedTimeInSeconds > secondsInDay * 7 {
+                    dateformatter.dateFormat = "MM/dd/yy"
+                } else if elapsedTimeInSeconds > secondsInDay {
+                    dateformatter.dateFormat = "EEE"
+                }
+                
                 timeLabel.text = dateformatter.string(from: date as Date)
             }
         }
@@ -133,6 +149,16 @@ class MessageCell: BaseCell {
         return imageView
     }()
     
+    // override highlighted method
+    override var isHighlighted: Bool {
+        didSet {
+            backgroundColor = isHighlighted ? #colorLiteral(red: 0, green: 0.5254901961, blue: 1, alpha: 1) : UIColor.white
+            nameLabel.textColor = isHighlighted ? #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 1) : UIColor.black
+            timeLabel.textColor = isHighlighted ? #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 1) : UIColor.darkGray
+            messageLabel.textColor = isHighlighted ? #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 1) : UIColor.darkGray
+        }
+    }
+    
     override func setupView() {
         
         profileImageView.image = UIImage(named: "zuckprofile")
@@ -150,7 +176,6 @@ class MessageCell: BaseCell {
         
         addConstraintsWithFormat(format: "H:|-82-[v0]|", views: dividerLineView)
         addConstraintsWithFormat(format: "V:[v0(0.75)]|", views: dividerLineView)
-        
     }
     
     private func setupContainerView() {
@@ -207,7 +232,5 @@ extension UIView {
         }
         
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: format, options: [], metrics: nil, views: viewsDict))
-        
     }
-    
 }
